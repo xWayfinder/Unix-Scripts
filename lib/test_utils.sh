@@ -1,11 +1,15 @@
 #!/bin/sh
+########################################################################
+# Test Utils
+# Description: Collection of useful function for writing and tests.
+#
+########################################################################
 source "$lib_dir/string_utils.sh"
 source "$lib_dir/file_utils.sh"
 
 function throw_error(){ #$1=error_message $2=error_log
    echo "FAILED" >> "$2"
    echo "ERROR: $1" >> "$2"
-#   echo "ERROR: See file: $test_output_file for reason"
    exit 2                    
 }
 

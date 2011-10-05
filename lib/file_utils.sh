@@ -1,7 +1,11 @@
 #!/bin/sh
+########################################################################
+# Diskspace Usage Test
+# Description: Verifies diskspace used is below a specified threshold.
+#
+########################################################################
 
-
-function set_input_file(){
+function set_input_file(){ # $1 = file name
    if [ -f "$1" ]; then
      echo "$1"
    else
@@ -9,8 +13,9 @@ function set_input_file(){
    fi
 }
 
-function is_directory(){
-   search_string="[[:alnum:]]/$"
+function is_directory(){ # $1 = string to check
+   search_string="[a-zA-Z0-9]/$"
+   #search_string="[[:alnum:]]/$"
    if `echo ${1} | grep "${search_string}" 1>/dev/null 2>&1` ; then
       echo "true"
    else
@@ -18,11 +23,12 @@ function is_directory(){
    fi
 }
 
-
-#####################
-#TEST - is_directory
-######################
+#Usage is_directory() $1 = string to check
 #this_string="/dir/dir/"
 #if [[ $(is_directory $this_String) == "true" ]] ; then
 #echo "success!"
 #fi
+
+#Usage set_input_file() $1 = file name
+#set_input_file "
+my_File"

@@ -1,7 +1,7 @@
 #!/bin/sh
 ########################################################################
 # Process Test
-# Description: A test to check 
+# Description: Verfies specified process are alive
 #
 ########################################################################
 

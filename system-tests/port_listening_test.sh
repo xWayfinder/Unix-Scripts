@@ -1,5 +1,10 @@
 #!/bin/sh
-lib_dir="../../lib"
+########################################################################
+# Port Listening Test
+# Description: Verifies expected ports are listening.
+#
+########################################################################
+lib_dir="../lib"
 source "$lib_dir/network_utils.sh"
 source "$lib_dir/test_utils.sh"
 source "$lib_dir/file_utils.sh"
