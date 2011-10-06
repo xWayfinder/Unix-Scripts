@@ -26,6 +26,7 @@ function format_result(){ #$1=result $2=logfile
 function set_test_output_file(){ #$@ 
    if [ $# -eq 2 ]; then
       if [[ $(is_directory $2) == "true" ]] ; then
+         mkdir -p $2
          file_name="$2$(timestamp_logfile "$(replace $0 ".sh" "")")"
       else
          file_name="$2"

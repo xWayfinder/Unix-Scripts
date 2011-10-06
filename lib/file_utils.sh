@@ -30,5 +30,4 @@ function is_directory(){ # $1 = string to check
 #fi
 
 #Usage set_input_file() $1 = file name
-#set_input_file "
-my_File"
+#set_input_file "my_File"
